@@ -3,10 +3,13 @@
 import re
 import numpy as np
 
-# add a blacklist of emails to skip
+### Suggestions for Improvement ###
+# 
+# 1) import market/location dict
+# 2) map location to parent market
+# 3) compare against leadsheets & designate CB sales
 #
-# import market/location dict
-# map location to parent market
+### Main module
 
 def fix_email(email):
 
