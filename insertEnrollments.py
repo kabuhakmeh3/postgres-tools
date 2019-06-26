@@ -40,7 +40,7 @@ def process_enrollments(file_to_read, kind='excel'):
 
 def main():
     
-    data_path = '/home/ubuntu/trufit/data/enrollments'
+    data_path = '/home/ubuntu/pathto/data/enrollments'
     file_name = 'daily-enrollments.xlsx'
 
     print('Processing:', file_name)
