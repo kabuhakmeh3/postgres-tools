@@ -41,11 +41,20 @@ def process_enrollments(file_to_read, kind='excel'):
 def main():
     
     data_path = '/home/ubuntu/trufit/data/enrollments'
-    file_name = 'processed-daily-enrollments.xlsx'
+    file_name = 'daily-enrollments.xlsx'
 
     print('Processing:', file_name)
     df_path = os.path.join(data_path, file_name)
     data = process_enrollments(df_path, kind='excel')
+    
+    cols_to_write = ['first_name', 'last_name', 'home_phone', 
+                     'cell_phone', 'email', 'payment', 
+                     'cash_price', 'contract_length', 
+                     'membership_description','club_name', 
+                     'enter_date', 'gender', 'promo_code', 
+                     'emp_name']
+    # avoid inconsistencies and only write columns existing in db
+    data = data[cols_to_write]
     print(data.shape)
     # write to database
     try:
