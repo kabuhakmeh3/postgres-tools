@@ -1,15 +1,13 @@
 # a module for various cleaning functions for enrollments
-#
 
-# import modules
 import re
 import numpy as np
 
-### Suggestions for Improvement ###
+### Proposed changes ###
 # 
 # 1) import market/location dict
 # 2) map location to parent market
-# 3) compare against leadsheets & designate CB sales
+# 3) compare against leadsheets & label sales
 #
 ### Main module
 
